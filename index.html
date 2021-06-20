@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let tc = +prompt("Введите темпаратуру в градусах Цельсия:");
+        let tf = (9 / 5) * tc + 32;
+        alert("Темпаратура в градусах по Фаренгейту: " + tf);
+    </script>
+    <script>
+        let name = "Василий";
+        let admin = name;
+        console.log(admin);
+    </script>
+    <script>
+        /* Первые два операнда являются числами, третий операнд является строкой, поэтому получаем 2010 
+        1. 10 + 10 = 20
+        2. 20 + "10" = 2010*/
+        let result1 = 10 + 10 + "10"
+        console.log(result1);
+        /* Первый и третий операнд являются числами, второй строкой, поэтому получаем 101010
+        1. 10 + "10" = "1010"
+        2. "1010" + 10 = "101010"
+        */
+        let result2 = 10 + "10" + 10
+        console.log(result2);
+        /* Когда к третьему операнду приписали "+", он из строки стал числом, поэтому 10 + 10 + 10 = 30
+        1. 10 + 10 + 10 = 30*/
+        let result3 = 10 + 10 + +"10"
+        console.log(result3);
+        /* -"" воспринимается как "-0", а 10 делить на -0 = -infinity, которое является числом 
+        1. 10 / -0 = -infinity*/
+        let result4 = 10 / -""
+        console.log(result4);
+        /* Поставили + перед строкой, но он не стал числом т.к. имеет запятую вместо точки. Число поделить на строку нельзя, поэтому ответ NaN
+        1. 10 / +"2,5" = NaN*/
+        let result5 = 10 / +"2,5"
+        console.log(result5);
+    </script>
+</body>
+
+</html>
